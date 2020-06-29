@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[bloc]{automultiplechoice}
+\usepackage{multicol}
+
+%%
+%%
+
+
+%%
+%%
+
+\makeatletter
+\def\SujetNum{\the\AMCid@etud}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\baremeDefautM{e=0,v=0,p=0,formula=(NBC+NMC > 0 ? (NBC - NMC)/NB : 0)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{copieexamen}[10]
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{center}
+    \Large\textbf{SAMPLE EXAM $\sharp\SujetNum$}
+  \end{center}
+
+  \edef\TEX{{inc/C\SujetNum.tex}}
+  \expandafter\input\TEX
+
+  \noindent
+  The purpose of the exam is to analyse this program:
+
+  \bigskip
+  \edef\PNG{{inc/C\SujetNum.png}}
+  \def\INCPNG{\noindent\includegraphics[width=\textwidth]}
+  \expandafter\INCPNG\PNG
+  \bigskip
+
+  \edef\GROUP{{COMP\SujetNum}}
+  \expandafter\shufflegroup\GROUP
+  \expandafter\restituegroupe\GROUP
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{copieexamen}
+
+\end{document}

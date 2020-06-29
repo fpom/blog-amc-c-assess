@@ -1,0 +1,77 @@
+\expandafter\def\csname cpp:swap\endcsname{1}
+\expandafter\def\csname cpp:PARAM(x,y)\endcsname{y, x}
+\expandafter\def\csname cpp:comp\endcsname{max}
+\expandafter\def\csname cpp:INIT\endcsname{0}
+\expandafter\def\csname cpp:PROCESS(c,v)\endcsname{c = v}
+\expandafter\def\csname cpp:NOT\endcsname{0}
+\expandafter\def\csname cpp:COND(f,c,v)\endcsname{(v > c) && f}
+\expandafter\def\csname cpp:FALSE\endcsname{0}
+\expandafter\def\csname cpp:TRUE\endcsname{1}
+\expandafter\def\csname cpp:join\endcsname{and}
+\expandafter\def\csname cpp:FORALLIN\endcsname{roar}
+\expandafter\def\csname cpp:A\endcsname{gerbil}
+\expandafter\def\csname cpp:B\endcsname{filmed}
+\expandafter\def\csname cpp:C\endcsname{franc}
+\expandafter\def\csname cpp:I\endcsname{colors}
+\expandafter\def\csname cpp:J\endcsname{bathing}
+\expandafter\def\csname cpp:F\endcsname{side}
+\expandafter\def\csname cpp:U\endcsname{wood}
+\expandafter\def\csname cpp:TABU_LEN\endcsname{6}
+\expandafter\def\csname cpp:TABU_VAL\endcsname{[6, 7, 7, 10, 1, 5]}
+\expandafter\def\csname cpp:TABU\endcsname{{.len=6, .val=malloc(6 * sizeof(int))}}
+\expandafter\def\csname cpp:V\endcsname{maces}
+\expandafter\def\csname cpp:TABV_LEN\endcsname{6}
+\expandafter\def\csname cpp:TABV_VAL\endcsname{[5, 1, 2, 1, 7, 1]}
+\expandafter\def\csname cpp:TABV\endcsname{{.len=6, .val=malloc(6 * sizeof(int))}}
+
+\def\C#1{\csname cpp:#1\endcsname}
+
+\element{COMP7}{
+  \begin{questionmult}{C1}
+    What does function \C{FORALLIN} computes?
+    \AMCBoxedAnswers
+    \begin{reponses}
+      \wrongchoice{the smallest value that is in \texttt{gerbil} but not in \texttt{filmed}}
+      \wrongchoice{the largest value that is in \texttt{gerbil} but not in \texttt{filmed}}
+      \wrongchoice{the sum of the values that are in \texttt{gerbil} but not in \texttt{filmed}}
+      \wrongchoice{the number of values that are in \texttt{gerbil} but not in \texttt{filmed}}
+      \wrongchoice{the smallest value that is both in \texttt{gerbil} and in \texttt{filmed}}
+      \wrongchoice{the largest value that is both in \texttt{gerbil} and in \texttt{filmed}}
+      \wrongchoice{the sum of the values that are both in \texttt{gerbil} and in \texttt{filmed}}
+      \wrongchoice{the number of values that are both in \texttt{gerbil} and in \texttt{filmed}}
+      \wrongchoice{the smallest value that is in \texttt{filmed} but not in \texttt{gerbil}}
+      \wrongchoice{the largest value that is in \texttt{filmed} but not in \texttt{gerbil}}
+      \wrongchoice{the sum of the values that are in \texttt{filmed} but not in \texttt{gerbil}}
+      \wrongchoice{the number of values that are in \texttt{filmed} but not in \texttt{gerbil}}
+      \wrongchoice{the smallest value that is both in \texttt{filmed} and in \texttt{gerbil}}
+      \correctchoice{the largest value that is both in \texttt{filmed} and in \texttt{gerbil}}
+      \wrongchoice{the sum of the values that are both in \texttt{filmed} and in \texttt{gerbil}}
+      \wrongchoice{the number of values that are both in \texttt{filmed} and in \texttt{gerbil}}
+    \end{reponses}
+  \end{questionmult}
+  \begin{questionmult}{C2}
+    What does the program prints?
+    \begin{multicols}{4}
+      \AMCBoxedAnswers
+      \begin{reponses}
+        \wrongchoice{1}
+        \wrongchoice{2}
+        \wrongchoice{4}
+        \wrongchoice{5}
+        \wrongchoice{6}
+        \correctchoice{7}
+        \wrongchoice{10}
+        \wrongchoice{15}
+        \wrongchoice{16}
+        \wrongchoice{20}
+        \wrongchoice{21}
+        \wrongchoice{29}
+      \end{reponses}
+    \end{multicols}
+  \end{questionmult}
+  \begin{questionmult}{C3}
+    What does the program prints?
+    \AMCnumericChoices{7}{digits=3,vertical=true,scoreexact=1,scoreapprox=0,borderwidth=1pt,sign=false}
+  \end{questionmult}
+}
+

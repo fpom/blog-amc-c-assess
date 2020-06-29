@@ -1,0 +1,77 @@
+\expandafter\def\csname cpp:swap\endcsname{1}
+\expandafter\def\csname cpp:PARAM(x,y)\endcsname{y, x}
+\expandafter\def\csname cpp:comp\endcsname{max}
+\expandafter\def\csname cpp:INIT\endcsname{0}
+\expandafter\def\csname cpp:PROCESS(c,v)\endcsname{c = v}
+\expandafter\def\csname cpp:NOT\endcsname{1}
+\expandafter\def\csname cpp:COND(f,c,v)\endcsname{(!f) && (v > c)}
+\expandafter\def\csname cpp:FALSE\endcsname{0}
+\expandafter\def\csname cpp:TRUE\endcsname{1}
+\expandafter\def\csname cpp:join\endcsname{sub}
+\expandafter\def\csname cpp:FORALLIN\endcsname{junkie}
+\expandafter\def\csname cpp:A\endcsname{news}
+\expandafter\def\csname cpp:B\endcsname{dislike}
+\expandafter\def\csname cpp:C\endcsname{undo}
+\expandafter\def\csname cpp:I\endcsname{abode}
+\expandafter\def\csname cpp:J\endcsname{severer}
+\expandafter\def\csname cpp:F\endcsname{dizzy}
+\expandafter\def\csname cpp:U\endcsname{skimpy}
+\expandafter\def\csname cpp:TABU_LEN\endcsname{5}
+\expandafter\def\csname cpp:TABU_VAL\endcsname{[7, 7, 7, 2, 1]}
+\expandafter\def\csname cpp:TABU\endcsname{{.len=5, .val=malloc(5 * sizeof(int))}}
+\expandafter\def\csname cpp:V\endcsname{nickels}
+\expandafter\def\csname cpp:TABV_LEN\endcsname{8}
+\expandafter\def\csname cpp:TABV_VAL\endcsname{[9, 1, 3, 8, 5, 1, 7, 8]}
+\expandafter\def\csname cpp:TABV\endcsname{{.len=8, .val=malloc(8 * sizeof(int))}}
+
+\def\C#1{\csname cpp:#1\endcsname}
+
+\element{COMP2}{
+  \begin{questionmult}{C1}
+    What does function \C{FORALLIN} computes?
+    \AMCBoxedAnswers
+    \begin{reponses}
+      \wrongchoice{the smallest value that is in \texttt{news} but not in \texttt{dislike}}
+      \wrongchoice{the largest value that is in \texttt{news} but not in \texttt{dislike}}
+      \wrongchoice{the sum of the values that are in \texttt{news} but not in \texttt{dislike}}
+      \wrongchoice{the number of values that are in \texttt{news} but not in \texttt{dislike}}
+      \wrongchoice{the smallest value that is both in \texttt{news} and in \texttt{dislike}}
+      \wrongchoice{the largest value that is both in \texttt{news} and in \texttt{dislike}}
+      \wrongchoice{the sum of the values that are both in \texttt{news} and in \texttt{dislike}}
+      \wrongchoice{the number of values that are both in \texttt{news} and in \texttt{dislike}}
+      \wrongchoice{the smallest value that is in \texttt{dislike} but not in \texttt{news}}
+      \correctchoice{the largest value that is in \texttt{dislike} but not in \texttt{news}}
+      \wrongchoice{the sum of the values that are in \texttt{dislike} but not in \texttt{news}}
+      \wrongchoice{the number of values that are in \texttt{dislike} but not in \texttt{news}}
+      \wrongchoice{the smallest value that is both in \texttt{dislike} and in \texttt{news}}
+      \wrongchoice{the largest value that is both in \texttt{dislike} and in \texttt{news}}
+      \wrongchoice{the sum of the values that are both in \texttt{dislike} and in \texttt{news}}
+      \wrongchoice{the number of values that are both in \texttt{dislike} and in \texttt{news}}
+    \end{reponses}
+  \end{questionmult}
+  \begin{questionmult}{C2}
+    What does the program prints?
+    \begin{multicols}{4}
+      \AMCBoxedAnswers
+      \begin{reponses}
+        \wrongchoice{1}
+        \wrongchoice{2}
+        \wrongchoice{3}
+        \wrongchoice{4}
+        \wrongchoice{33}
+        \wrongchoice{5}
+        \wrongchoice{7}
+        \correctchoice{9}
+        \wrongchoice{11}
+        \wrongchoice{14}
+        \wrongchoice{16}
+        \wrongchoice{22}
+      \end{reponses}
+    \end{multicols}
+  \end{questionmult}
+  \begin{questionmult}{C3}
+    What does the program prints?
+    \AMCnumericChoices{9}{digits=3,vertical=true,scoreexact=1,scoreapprox=0,borderwidth=1pt,sign=false}
+  \end{questionmult}
+}
+

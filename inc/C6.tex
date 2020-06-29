@@ -1,0 +1,79 @@
+\expandafter\def\csname cpp:swap\endcsname{1}
+\expandafter\def\csname cpp:PARAM(x,y)\endcsname{y, x}
+\expandafter\def\csname cpp:comp\endcsname{min}
+\expandafter\def\csname cpp:INIT\endcsname{999}
+\expandafter\def\csname cpp:PROCESS(c,v)\endcsname{c = v}
+\expandafter\def\csname cpp:NOT\endcsname{0}
+\expandafter\def\csname cpp:COND(f,c,v)\endcsname{f && (c > v)}
+\expandafter\def\csname cpp:FALSE\endcsname{0}
+\expandafter\def\csname cpp:TRUE\endcsname{1}
+\expandafter\def\csname cpp:join\endcsname{and}
+\expandafter\def\csname cpp:FORALLIN\endcsname{states}
+\expandafter\def\csname cpp:A\endcsname{atom}
+\expandafter\def\csname cpp:B\endcsname{insult}
+\expandafter\def\csname cpp:C\endcsname{linked}
+\expandafter\def\csname cpp:I\endcsname{itchier}
+\expandafter\def\csname cpp:J\endcsname{chassis}
+\expandafter\def\csname cpp:F\endcsname{bathe}
+\expandafter\def\csname cpp:U\endcsname{callow}
+\expandafter\def\csname cpp:TABU_LEN\endcsname{10}
+\expandafter\def\csname cpp:TABU_VAL\endcsname{[2, 10, 9, 8, 7, 1, 4, 7, 1, 1]}
+\expandafter\def\csname cpp:TABU\endcsname{{.len=10, .val=malloc(10 * sizeof(int))}}
+\expandafter\def\csname cpp:V\endcsname{quires}
+\expandafter\def\csname cpp:TABV_LEN\endcsname{9}
+\expandafter\def\csname cpp:TABV_VAL\endcsname{[7, 1, 8, 1, 5, 5, 7, 9, 6]}
+\expandafter\def\csname cpp:TABV\endcsname{{.len=9, .val=malloc(9 * sizeof(int))}}
+
+\def\C#1{\csname cpp:#1\endcsname}
+
+\element{COMP6}{
+  \begin{questionmult}{C1}
+    What does function \C{FORALLIN} computes?
+    \AMCBoxedAnswers
+    \begin{reponses}
+      \wrongchoice{the smallest value that is in \texttt{atom} but not in \texttt{insult}}
+      \wrongchoice{the largest value that is in \texttt{atom} but not in \texttt{insult}}
+      \wrongchoice{the sum of the values that are in \texttt{atom} but not in \texttt{insult}}
+      \wrongchoice{the number of values that are in \texttt{atom} but not in \texttt{insult}}
+      \wrongchoice{the smallest value that is both in \texttt{atom} and in \texttt{insult}}
+      \wrongchoice{the largest value that is both in \texttt{atom} and in \texttt{insult}}
+      \wrongchoice{the sum of the values that are both in \texttt{atom} and in \texttt{insult}}
+      \wrongchoice{the number of values that are both in \texttt{atom} and in \texttt{insult}}
+      \wrongchoice{the smallest value that is in \texttt{insult} but not in \texttt{atom}}
+      \wrongchoice{the largest value that is in \texttt{insult} but not in \texttt{atom}}
+      \wrongchoice{the sum of the values that are in \texttt{insult} but not in \texttt{atom}}
+      \wrongchoice{the number of values that are in \texttt{insult} but not in \texttt{atom}}
+      \correctchoice{the smallest value that is both in \texttt{insult} and in \texttt{atom}}
+      \wrongchoice{the largest value that is both in \texttt{insult} and in \texttt{atom}}
+      \wrongchoice{the sum of the values that are both in \texttt{insult} and in \texttt{atom}}
+      \wrongchoice{the number of values that are both in \texttt{insult} and in \texttt{atom}}
+    \end{reponses}
+  \end{questionmult}
+  \begin{questionmult}{C2}
+    What does the program prints?
+    \begin{multicols}{4}
+      \AMCBoxedAnswers
+      \begin{reponses}
+        \correctchoice{1}
+        \wrongchoice{2}
+        \wrongchoice{3}
+        \wrongchoice{34}
+        \wrongchoice{5}
+        \wrongchoice{6}
+        \wrongchoice{7}
+        \wrongchoice{33}
+        \wrongchoice{9}
+        \wrongchoice{10}
+        \wrongchoice{13}
+        \wrongchoice{16}
+        \wrongchoice{21}
+        \wrongchoice{29}
+      \end{reponses}
+    \end{multicols}
+  \end{questionmult}
+  \begin{questionmult}{C3}
+    What does the program prints?
+    \AMCnumericChoices{1}{digits=3,vertical=true,scoreexact=1,scoreapprox=0,borderwidth=1pt,sign=false}
+  \end{questionmult}
+}
+

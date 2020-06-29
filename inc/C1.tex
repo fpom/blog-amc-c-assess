@@ -1,0 +1,80 @@
+\expandafter\def\csname cpp:swap\endcsname{1}
+\expandafter\def\csname cpp:PARAM(x,y)\endcsname{y, x}
+\expandafter\def\csname cpp:comp\endcsname{sum}
+\expandafter\def\csname cpp:INIT\endcsname{0}
+\expandafter\def\csname cpp:PROCESS(c,v)\endcsname{c += v}
+\expandafter\def\csname cpp:NOT\endcsname{1}
+\expandafter\def\csname cpp:COND(f,c,v)\endcsname{!f}
+\expandafter\def\csname cpp:FALSE\endcsname{0}
+\expandafter\def\csname cpp:TRUE\endcsname{1}
+\expandafter\def\csname cpp:join\endcsname{sub}
+\expandafter\def\csname cpp:FORALLIN\endcsname{highest}
+\expandafter\def\csname cpp:A\endcsname{piecing}
+\expandafter\def\csname cpp:B\endcsname{lazied}
+\expandafter\def\csname cpp:C\endcsname{vast}
+\expandafter\def\csname cpp:I\endcsname{sibyls}
+\expandafter\def\csname cpp:J\endcsname{cooky}
+\expandafter\def\csname cpp:F\endcsname{bifocal}
+\expandafter\def\csname cpp:U\endcsname{getup}
+\expandafter\def\csname cpp:TABU_LEN\endcsname{10}
+\expandafter\def\csname cpp:TABU_VAL\endcsname{[7, 3, 1, 7, 8, 6, 10, 2, 4, 3]}
+\expandafter\def\csname cpp:TABU\endcsname{{.len=10, .val=malloc(10 * sizeof(int))}}
+\expandafter\def\csname cpp:V\endcsname{cupful}
+\expandafter\def\csname cpp:TABV_LEN\endcsname{8}
+\expandafter\def\csname cpp:TABV_VAL\endcsname{[3, 3, 4, 4, 8, 9, 2, 3]}
+\expandafter\def\csname cpp:TABV\endcsname{{.len=8, .val=malloc(8 * sizeof(int))}}
+
+\def\C#1{\csname cpp:#1\endcsname}
+
+\element{COMP1}{
+  \begin{questionmult}{C1}
+    What does function \C{FORALLIN} computes?
+    \AMCBoxedAnswers
+    \begin{reponses}
+      \wrongchoice{the smallest value that is in \texttt{piecing} but not in \texttt{lazied}}
+      \wrongchoice{the largest value that is in \texttt{piecing} but not in \texttt{lazied}}
+      \wrongchoice{the sum of the values that are in \texttt{piecing} but not in \texttt{lazied}}
+      \wrongchoice{the number of values that are in \texttt{piecing} but not in \texttt{lazied}}
+      \wrongchoice{the smallest value that is both in \texttt{piecing} and in \texttt{lazied}}
+      \wrongchoice{the largest value that is both in \texttt{piecing} and in \texttt{lazied}}
+      \wrongchoice{the sum of the values that are both in \texttt{piecing} and in \texttt{lazied}}
+      \wrongchoice{the number of values that are both in \texttt{piecing} and in \texttt{lazied}}
+      \wrongchoice{the smallest value that is in \texttt{lazied} but not in \texttt{piecing}}
+      \wrongchoice{the largest value that is in \texttt{lazied} but not in \texttt{piecing}}
+      \correctchoice{the sum of the values that are in \texttt{lazied} but not in \texttt{piecing}}
+      \wrongchoice{the number of values that are in \texttt{lazied} but not in \texttt{piecing}}
+      \wrongchoice{the smallest value that is both in \texttt{lazied} and in \texttt{piecing}}
+      \wrongchoice{the largest value that is both in \texttt{lazied} and in \texttt{piecing}}
+      \wrongchoice{the sum of the values that are both in \texttt{lazied} and in \texttt{piecing}}
+      \wrongchoice{the number of values that are both in \texttt{lazied} and in \texttt{piecing}}
+    \end{reponses}
+  \end{questionmult}
+  \begin{questionmult}{C2}
+    What does the program prints?
+    \begin{multicols}{4}
+      \AMCBoxedAnswers
+      \begin{reponses}
+        \wrongchoice{1}
+        \wrongchoice{2}
+        \wrongchoice{5}
+        \wrongchoice{6}
+        \wrongchoice{7}
+        \wrongchoice{8}
+        \correctchoice{9}
+        \wrongchoice{10}
+        \wrongchoice{11}
+        \wrongchoice{14}
+        \wrongchoice{15}
+        \wrongchoice{20}
+        \wrongchoice{21}
+        \wrongchoice{27}
+        \wrongchoice{31}
+      \end{reponses}
+    \end{multicols}
+  \end{questionmult}
+  \begin{questionmult}{C3}
+    What does the program prints?
+    \AMCnumericChoices{9}{digits=3,vertical=true,scoreexact=1,scoreapprox=0,borderwidth=1pt,sign=false}
+  \end{questionmult}
+}
+

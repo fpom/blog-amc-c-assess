@@ -1,0 +1,77 @@
+\expandafter\def\csname cpp:swap\endcsname{1}
+\expandafter\def\csname cpp:PARAM(x,y)\endcsname{y, x}
+\expandafter\def\csname cpp:comp\endcsname{num}
+\expandafter\def\csname cpp:PROCESS(c,v)\endcsname{c++}
+\expandafter\def\csname cpp:INIT\endcsname{0}
+\expandafter\def\csname cpp:NOT\endcsname{0}
+\expandafter\def\csname cpp:COND(f,c,v)\endcsname{f}
+\expandafter\def\csname cpp:FALSE\endcsname{0}
+\expandafter\def\csname cpp:TRUE\endcsname{1}
+\expandafter\def\csname cpp:join\endcsname{and}
+\expandafter\def\csname cpp:FORALLIN\endcsname{licked}
+\expandafter\def\csname cpp:A\endcsname{posh}
+\expandafter\def\csname cpp:B\endcsname{buggier}
+\expandafter\def\csname cpp:C\endcsname{malts}
+\expandafter\def\csname cpp:I\endcsname{legal}
+\expandafter\def\csname cpp:J\endcsname{alibied}
+\expandafter\def\csname cpp:F\endcsname{outpost}
+\expandafter\def\csname cpp:U\endcsname{profuse}
+\expandafter\def\csname cpp:TABU_LEN\endcsname{5}
+\expandafter\def\csname cpp:TABU_VAL\endcsname{[4, 6, 10, 1, 10]}
+\expandafter\def\csname cpp:TABU\endcsname{{.len=5, .val=malloc(5 * sizeof(int))}}
+\expandafter\def\csname cpp:V\endcsname{navels}
+\expandafter\def\csname cpp:TABV_LEN\endcsname{10}
+\expandafter\def\csname cpp:TABV_VAL\endcsname{[4, 7, 1, 3, 8, 5, 5, 10, 1, 2]}
+\expandafter\def\csname cpp:TABV\endcsname{{.len=10, .val=malloc(10 * sizeof(int))}}
+
+\def\C#1{\csname cpp:#1\endcsname}
+
+\element{COMP9}{
+  \begin{questionmult}{C1}
+    What does function \C{FORALLIN} computes?
+    \AMCBoxedAnswers
+    \begin{reponses}
+      \wrongchoice{the smallest value that is in \texttt{posh} but not in \texttt{buggier}}
+      \wrongchoice{the largest value that is in \texttt{posh} but not in \texttt{buggier}}
+      \wrongchoice{the sum of the values that are in \texttt{posh} but not in \texttt{buggier}}
+      \wrongchoice{the number of values that are in \texttt{posh} but not in \texttt{buggier}}
+      \wrongchoice{the smallest value that is both in \texttt{posh} and in \texttt{buggier}}
+      \wrongchoice{the largest value that is both in \texttt{posh} and in \texttt{buggier}}
+      \wrongchoice{the sum of the values that are both in \texttt{posh} and in \texttt{buggier}}
+      \wrongchoice{the number of values that are both in \texttt{posh} and in \texttt{buggier}}
+      \wrongchoice{the smallest value that is in \texttt{buggier} but not in \texttt{posh}}
+      \wrongchoice{the largest value that is in \texttt{buggier} but not in \texttt{posh}}
+      \wrongchoice{the sum of the values that are in \texttt{buggier} but not in \texttt{posh}}
+      \wrongchoice{the number of values that are in \texttt{buggier} but not in \texttt{posh}}
+      \wrongchoice{the smallest value that is both in \texttt{buggier} and in \texttt{posh}}
+      \wrongchoice{the largest value that is both in \texttt{buggier} and in \texttt{posh}}
+      \wrongchoice{the sum of the values that are both in \texttt{buggier} and in \texttt{posh}}
+      \correctchoice{the number of values that are both in \texttt{buggier} and in \texttt{posh}}
+    \end{reponses}
+  \end{questionmult}
+  \begin{questionmult}{C2}
+    What does the program prints?
+    \begin{multicols}{4}
+      \AMCBoxedAnswers
+      \begin{reponses}
+        \wrongchoice{1}
+        \wrongchoice{2}
+        \correctchoice{4}
+        \wrongchoice{5}
+        \wrongchoice{6}
+        \wrongchoice{8}
+        \wrongchoice{10}
+        \wrongchoice{16}
+        \wrongchoice{21}
+        \wrongchoice{22}
+        \wrongchoice{25}
+        \wrongchoice{30}
+      \end{reponses}
+    \end{multicols}
+  \end{questionmult}
+  \begin{questionmult}{C3}
+    What does the program prints?
+    \AMCnumericChoices{4}{digits=3,vertical=true,scoreexact=1,scoreapprox=0,borderwidth=1pt,sign=false}
+  \end{questionmult}
+}
+
