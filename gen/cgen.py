@@ -126,7 +126,6 @@ class Exo (p5.PrePreProcessor) :
                   r"}" "\n\n")
 
 if __name__ == "__main__" :
-    # generate as many tables as needed
     import tqdm
     inc = pathlib.Path("../inc")
     inc.mkdir(exist_ok=True)

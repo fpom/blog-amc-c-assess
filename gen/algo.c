@@ -18,6 +18,8 @@
   //let PROCESS(c,v) = "c++"
   //let INIT = 0
 //end if
+//let FALSE = randint(0, 1)
+//let TRUE = 1 - FALSE
 //let NOT = randint(0, 1)
 //if NOT
   //if comp == "min"
@@ -36,8 +38,6 @@
     //let COND(f,c,v) = "f"
   //end if
 //end if
-//let FALSE = randint(0, 1)
-//let TRUE = 1 - FALSE
 //let join = "sub" if FALSE ^ NOT else "and"
 #include <stdio.h>
 #include <stdlib.h>
