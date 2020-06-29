@@ -2,8 +2,8 @@ import tempfile, subprocess, pathlib, random
 import badass.p5 as p5
 
 class Exo (p5.PrePreProcessor) :
-    def __init__ (self) :
-        super().__init__("algo.c")
+    def __init__ (self, path="algo.c") :
+        super().__init__(path)
         self.swap = self.top.cppenv["swap"]
         self.join = self.top.cppenv["join"]
         self.comp = self.top.cppenv["comp"]
